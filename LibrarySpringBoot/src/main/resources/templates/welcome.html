@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" th:href="@{/style/styles.css}">
+</head>
+<body>
+  <h1>Welcome to my library!</h1>
+  <div class="welcomediv">
+      <form th:action="@{/login}">
+        <button type="submit">Login</button>
+      </form>
+      <form th:action="@{/register}">
+        <button type="submit">Register</button>
+      </form>
+  </div>
+</body>
+</html>

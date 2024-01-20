@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Book</title>
+    <link rel="stylesheet" th:href="@{/style/styles.css}">
+</head>
+<body>
+<h1>Add a new book!</h1>
+<form th:action="@{/newbook}" th:object="${book}" method="post">
+    <table>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" th:field="*{title}" /></td>
+            <td th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title Error</td>
+        </tr>
+        <tr>
+            <td>Author:</td>
+            <td><input type="text" th:field="*{author}" /></td>
+            <td th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Author Error</td>
+        </tr>
+        <tr>
+            <td>Release Year:</td>
+            <td><input type="text" th:field="*{releaseYear}" /></td>
+            <td th:if="${#fields.hasErrors('releaseYear')}" th:errors="*{releaseYear}">Release Year Error</td>
+        </tr>
+        <tr>
+            <td>Publisher:</td>
+            <td><input type="text" th:field="*{publisher}" /></td>
+            <td th:if="${#fields.hasErrors('publisher')}" th:errors="*{publisher}">Publisher Error</td>
+        </tr>
+    </table>
+    <button type="submit">Add it</button>
+</form>
+</body>
+</html>

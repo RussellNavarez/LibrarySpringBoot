@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.welcomediv {
+    display: flex;
+    padding: 5dvh;
+}
+
+button {
+    margin: 3dvh;
+    padding: 2dvh;
+    background-color: seagreen;
+    border: 1px solid seagreen;
+    border-radius: 1rem;
+}
+
+td {
+    margin: 3dvh;
+    padding: 2dvh;
+}
+
+input {
+    padding: 1dvh;
+    border: 1px solid;
+    border-radius: 1rem;
+}
