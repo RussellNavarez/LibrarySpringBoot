@@ -62,8 +62,9 @@ public class Controller {
     }
 
     @RequestMapping(value = {"/logout"}, method = RequestMethod.POST)
-    public String logoutDo(HttpServletRequest request, HttpServletResponse response)
+    public String logoutDo(HttpSession session)
     {
+        session.setAttribute("username", null);
         return "redirect:/login";
     }
 
