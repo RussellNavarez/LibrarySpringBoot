@@ -86,4 +86,13 @@ public class Controller {
         return "redirect:/home";
     }
 
+    @GetMapping("/deletebook")
+    public String deleteBook(@RequestParam("book_id") long id) {
+        for (Book book : bookRepository.findAll()) {
+            if (book.getId() == id) {
+                bookRepository.deleteById(book.getId());
+            }
+        } return "redirect:/home";
+    }
+
 }
