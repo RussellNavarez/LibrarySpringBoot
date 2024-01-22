@@ -24,7 +24,7 @@
             <td th:text="${book.author}"></td>
             <td th:text="${book.publisher}"></td>
             <td th:text="${book.releaseYear}"></td>
-
+            <td><a th:href="@{/deletebook(book_id = ${book.id})}">Remove</a></td>
         </tr>
     </table>
   <form th:action="@{/logout}" method="post">
